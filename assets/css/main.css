@@ -122,9 +122,9 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .brand-link { display: flex; align-items: center; gap: 18px; padding-top: 12px; padding-bottom: 12px; }
 .brand-school { border-bottom: 0; display: block; flex: none; }
 .brand-logo { width: 300px; min-width: 300px; height: auto; display: block; }
-.brand-divider { width: 1px; height: 43px; background: #ffffff; opacity: .45; flex: none; }
+.brand-divider { width: 1px; height: 47px; background: #ffffff; opacity: .45; flex: none; }
 .brand-name {
-  font: 700 38px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
+  font: 700 42px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
   color: #ffffff; display: block; white-space: nowrap; padding-top: 2px; border-bottom: 0;
 }
 .brand-name:hover { color: var(--on-navy-label); }
@@ -309,7 +309,7 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 
 /* ---------- hero ---------- */
 .hero { padding-top: 44px; padding-bottom: 44px; }
-.hero .display-1 { margin-bottom: 20px; max-width: 15ch; }
+.hero .display-1 { font-size: clamp(36px, 5.6vw, 62px); margin-bottom: 18px; max-width: 16ch; }
 .hero .display-1 em { font-style: normal; color: var(--red); }
 .hero .lede { margin-bottom: 26px; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
