@@ -308,12 +308,6 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 
 /* ---------- hero ---------- */
 .hero { padding-top: 64px; padding-bottom: 56px; }
-.metaline {
-  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
-  font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase;
-  color: var(--muted); margin: 0 0 26px;
-}
-.metaline .sep { width: 14px; height: 1px; background: var(--rule-med); }
 .hero .display-1 { margin-bottom: 26px; max-width: 15ch; }
 .hero .display-1 em { font-style: normal; color: var(--red); }
 .hero .lede { margin-bottom: 34px; }
