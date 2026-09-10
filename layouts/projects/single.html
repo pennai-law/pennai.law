@@ -19,6 +19,7 @@
         {{ with .Lastmod }}<dt>Updated</dt><dd>{{ .Format "January 2, 2006" }}</dd>{{ end }}
       </dl>
       {{ with .Params.github }}<a class="rail-gh" href="https://github.com/{{ . }}" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>{{ end }}
+      {{ with .Params.artifact_url }}<a class="rail-gh" href="{{ . }}" target="_blank" rel="noopener">Visit the site <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>{{ end }}
     </aside>
   </div>
 
