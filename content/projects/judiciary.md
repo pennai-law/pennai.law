@@ -2,7 +2,7 @@
 title: "Judiciary — Teaching the Bench"
 description: "Working with the federal judiciary on the practical use of AI tools — through training, research, chambers-facing tools, and structured feedback."
 date: 2026-05-07
-lastmod: 2026-05-09
+lastmod: 2026-09-10
 draft: false
 cluster: "judiciary"
 workstream: "04-judiciary"
@@ -10,11 +10,16 @@ status: active
 pillar: ["teach"]
 owner: ["Jackie Wang '27", "Hailey Parikh '27"]
 github: "pennai-law/judiciary"
+artifact_url: "https://judges.pennai.law/"
 ---
 
 The Project's judiciary workstream — the **PennLaw-Judiciary AI Testbed** — provides federal judges and their chambers with structured AI access, training, and ongoing support, governed by a formal Memorandum of Understanding. The work spans use-case research, chambers-facing tools, and a continuous feedback loop with participating chambers.
 
 Per the Project's pillar architecture, this work sits in **Teach** — judicial AI training is teaching the bench, not partnership-mediated Building.
+
+## The Judicial AI Portal
+
+The public face of the work is the [Judicial AI Portal](https://judges.pennai.law/), a plain-language resource for federal judges and chambers staff. It explains how AI tools differ from the legal research systems judges already trust, sorts observed chambers use cases by risk (drawn from the Testbed, reported in aggregate with chambers de-identified), and sets out guardrails for verification and confidentiality. It was prepared for the AI plenary at the 2026 Judicial Conference of the Sixth Circuit and went public on August 28, 2026. Openly licensed (CC BY 4.0).
 
 ## What it is
 
@@ -59,7 +64,7 @@ The Testbed is producing a working empirical picture of where AI helps in chambe
 
 ## Status
 
-Active and expanding. Monthly meetings with 15+ chambers continue; the orientation materials have been updated through model generations; new chambers are being onboarded.
+Active and expanding. Monthly meetings with 15+ chambers continue; the orientation materials have been updated through model generations; new chambers are being onboarded. The Judicial AI Portal launched August 28, 2026, and a training curriculum built from it is in development for fall 2026.
 
 ## Sensitivity
 
