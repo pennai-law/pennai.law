@@ -130,11 +130,11 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .brand-link { border-bottom: 0; flex: none; display: block; }
 /* Site masthead: the project name as page text in the display face, not artwork. */
 .brand-name {
-  font: 700 30px/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase;
+  font: 700 44px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
   color: var(--navy); display: block;
 }
 .brand-link:hover .brand-name { color: var(--red); }
-@media (max-width: 560px) { .brand-name { font-size: 24px; } .pennbar-logo { width: 220px; } }
+@media (max-width: 560px) { .brand-name { font-size: 32px; } .pennbar-logo { width: 220px; } }
 .main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .main-nav ul { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .nav-link {
