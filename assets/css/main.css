@@ -119,14 +119,15 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
    and the site name as page text in the display face. Nav sits in its own row below. */
 .site-header { border-bottom: 1px solid var(--rule-heavy); }
 .masthead { background: var(--navy); border-bottom: 4px solid var(--red); }
-.brand-link { border-bottom: 0; display: flex; align-items: center; gap: 18px; padding-top: 7px; padding-bottom: 7px; }
+.brand-link { display: flex; align-items: center; gap: 18px; padding-top: 12px; padding-bottom: 12px; }
+.brand-school { border-bottom: 0; display: block; flex: none; }
 .brand-logo { width: 300px; min-width: 300px; height: auto; display: block; }
 .brand-divider { width: 1px; height: 43px; background: #ffffff; opacity: .45; flex: none; }
 .brand-name {
   font: 700 38px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
-  color: #ffffff; display: block; white-space: nowrap; padding-top: 2px;
+  color: #ffffff; display: block; white-space: nowrap; padding-top: 2px; border-bottom: 0;
 }
-.brand-link:hover .brand-name { color: var(--on-navy-label); }
+.brand-name:hover { color: var(--on-navy-label); }
 .header-inner {
   max-width: var(--container); margin-inline: auto;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
