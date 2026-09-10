@@ -1,12 +1,17 @@
-<div class="pennbar" aria-hidden="true"></div>
+<div class="pennbar">
+  <div class="pennbar-inner wrapx">
+    {{- /* Official Penn Carey Law logo, reverse version, used unmodified per law.upenn.edu/brand.
+          It sits in its own institutional band, separate from the site's masthead below, so the
+          project name is page text and not part of the artwork: units may not build their own
+          lockups. Decision record: Box Lab/design/2026-09-10-brand-compliance.md */ -}}
+    <a href="https://www.law.upenn.edu" class="pennbar-logo-link" aria-label="{{ site.Params.institutionName }}">
+      <img src="/pcl-logo-reverse.png" alt="Penn Carey Law, University of Pennsylvania" class="pennbar-logo" width="1200" height="217">
+    </a>
+  </div>
+</div>
 <header class="site-header">
   <div class="header-inner wrapx">
     <a href="/" class="brand-link" aria-label="{{ site.Params.brandFormalName }} home">
-      {{- /* Official Penn Carey Law logo, used unmodified per law.upenn.edu/brand. The
-            project name is page text beside it, not artwork: units may not build their
-            own lockups. Swap for the Communications-issued departmental lockup if one
-            is produced. Decision record: Box Lab/design/2026-09-10-brand-compliance.md */ -}}
-      <img src="/pcl-logo.png" alt="Penn Carey Law, University of Pennsylvania" class="brand-logo" width="1200" height="217">
       <span class="brand-name">{{ site.Params.brandShortForm }}</span>
     </a>
     <nav class="main-nav" aria-label="Main">

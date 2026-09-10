@@ -63,7 +63,13 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 /* ---------- layout ---------- */
 .page { max-width: var(--container); margin-inline: auto; }
 .wrapx { padding-inline: var(--gutter); }
-.pennbar { height: 4px; background: linear-gradient(90deg, var(--navy) 0 62%, var(--red) 62% 100%); }
+/* Institutional band: navy, carrying the official Penn Carey Law reverse logo.
+   260px wide renders the mark 47px tall; the "University of Pennsylvania" line
+   is ~9px there, the floor before it stops being legible. */
+.pennbar { background: var(--navy); border-bottom: 4px solid var(--red); }
+.pennbar-inner { display: flex; align-items: center; padding-top: 12px; padding-bottom: 12px; }
+.pennbar-logo-link { border-bottom: 0; display: block; }
+.pennbar-logo { width: 260px; height: auto; display: block; }
 
 /* ---------- shared type ---------- */
 .display-1 {
@@ -121,15 +127,14 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
   padding-top: 18px; padding-bottom: 18px;
 }
-.brand-link { border-bottom: 0; flex: none; display: flex; align-items: center; gap: 18px; }
-/* Official Penn Carey Law logo (5.53:1). 300px wide renders 54px tall; the
-   "University of Pennsylvania" line is ~10px at that size, the legibility floor. */
-.brand-logo { width: 300px; min-width: 300px; height: auto; display: block; }
+.brand-link { border-bottom: 0; flex: none; display: block; }
+/* Site masthead: the project name as page text in the display face, not artwork. */
 .brand-name {
-  font: 600 15px/1 var(--f-display); letter-spacing: .13em; text-transform: uppercase;
-  color: var(--navy); padding-left: 18px; border-left: 1px solid var(--rule-med); line-height: 30px;
+  font: 700 30px/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--navy); display: block;
 }
-@media (max-width: 560px) { .brand-name { display: none; } .brand-logo { width: 240px; min-width: 240px; } }
+.brand-link:hover .brand-name { color: var(--red); }
+@media (max-width: 560px) { .brand-name { font-size: 24px; } .pennbar-logo { width: 220px; } }
 .main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .main-nav ul { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .nav-link {
