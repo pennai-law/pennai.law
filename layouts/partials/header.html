@@ -1,9 +1,17 @@
-<div class="pennbar" aria-hidden="true"></div>
 <header class="site-header">
-  <div class="header-inner wrapx">
-    <a href="/" class="brand-link" aria-label="{{ site.Params.brandShortForm }} home">
-      <img src="/heading-color.svg" alt="{{ site.Params.brandFormalName }} — pennai.law" class="brand-logo" width="1191" height="310">
+  <div class="masthead">
+    <a href="/" class="brand-link wrapx" aria-label="{{ site.Params.brandFormalName }} home">
+      {{- /* Official Penn Carey Law logo (reverse version), used unmodified per
+            law.upenn.edu/brand. The project name beside it is page text in the site's
+            own face, separated by a rule, not part of the artwork: units may not build
+            their own lockups. Layout per Polk 2026-09-10. Decision record:
+            Box Lab/design/2026-09-10-brand-compliance.md */ -}}
+      <img src="/pcl-logo-reverse.png" alt="Penn Carey Law, University of Pennsylvania" class="brand-logo" width="1200" height="217">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="brand-name">{{ site.Params.brandShortForm }}</span>
     </a>
+  </div>
+  <div class="header-inner wrapx">
     <nav class="main-nav" aria-label="Main">
       <ul>
         {{ range site.Menus.main }}

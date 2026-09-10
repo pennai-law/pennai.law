@@ -7,7 +7,6 @@
 :root {
   --navy: #011f5b;
   --red: #990000;
-  --mark-red: #822024;      /* lockup rule + dot ONLY — never interchange with --red */
   --ink: #14171c;
   --prose: #2c333d;
   --lede: #414853;
@@ -64,8 +63,6 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 /* ---------- layout ---------- */
 .page { max-width: var(--container); margin-inline: auto; }
 .wrapx { padding-inline: var(--gutter); }
-.pennbar { height: 4px; background: linear-gradient(90deg, var(--navy) 0 62%, var(--red) 62% 100%); }
-
 /* ---------- shared type ---------- */
 .display-1 {
   font: 700 clamp(44px, 7.5vw, 84px)/0.94 var(--f-display);
@@ -116,16 +113,32 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .pullquote cite { display: block; margin-top: 10px; font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-style: normal; }
 
 /* ---------- header ---------- */
+
+/* Masthead: navy band with a Penn-red rule, carrying the official Penn Carey Law
+   reverse logo (5.53:1; 300px wide renders 54px tall, logotype line ~11px), a rule,
+   and the site name as page text in the display face. Nav sits in its own row below. */
 .site-header { border-bottom: 1px solid var(--rule-heavy); }
+.masthead { background: var(--navy); border-bottom: 4px solid var(--red); }
+.brand-link { border-bottom: 0; display: flex; align-items: center; gap: 18px; padding-top: 7px; padding-bottom: 7px; }
+.brand-logo { width: 300px; min-width: 300px; height: auto; display: block; }
+.brand-divider { width: 1px; height: 43px; background: #ffffff; opacity: .45; flex: none; }
+.brand-name {
+  font: 700 38px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
+  color: #ffffff; display: block; white-space: nowrap; padding-top: 2px;
+}
+.brand-link:hover .brand-name { color: var(--on-navy-label); }
 .header-inner {
   max-width: var(--container); margin-inline: auto;
-  display: flex; align-items: center; justify-content: space-between; gap: 32px;
-  padding-top: 18px; padding-bottom: 18px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding-top: 8px; padding-bottom: 8px;
 }
-.brand-link { border-bottom: 0; flex: none; }
-.brand-logo { width: 288px; min-width: 288px; height: auto; display: block; }
-/* 288px is the URL-legibility floor (spec §7) — never shrink the mark below it. */
-.main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+@media (max-width: 560px) {
+  .brand-link { gap: 14px; }
+  .brand-logo { width: 220px; min-width: 220px; }
+  .brand-divider { height: 34px; }
+  .brand-name { font-size: 24px; }
+}
+.main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; width: 100%; justify-content: space-between; }
 .main-nav ul { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .nav-link {
   font: 500 11.5px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase;
@@ -294,16 +307,10 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 }
 
 /* ---------- hero ---------- */
-.hero { padding-top: 64px; padding-bottom: 56px; }
-.metaline {
-  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
-  font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase;
-  color: var(--muted); margin: 0 0 26px;
-}
-.metaline .sep { width: 14px; height: 1px; background: var(--rule-med); }
-.hero .display-1 { margin-bottom: 26px; max-width: 15ch; }
+.hero { padding-top: 44px; padding-bottom: 44px; }
+.hero .display-1 { margin-bottom: 20px; max-width: 15ch; }
 .hero .display-1 em { font-style: normal; color: var(--red); }
-.hero .lede { margin-bottom: 34px; }
+.hero .lede { margin-bottom: 26px; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   font: 500 12px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase;
