@@ -84,6 +84,7 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .section-h a {
   font: 500 10.5px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
   color: var(--red); border-bottom: 0;
+  display: inline-block; padding: 8px 0; margin: -8px 0;   /* 24px hit area, WCAG 2.2 SC 2.5.8 */
 }
 .section-h a:hover { border-bottom: 1px solid var(--red); }
 
@@ -110,7 +111,7 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .prose code { font-family: var(--f-mono); font-size: .88em; background: #f2f3f5; padding: 1px 5px; border-radius: 2px; }
 .pullquote { border-left: 2px solid var(--red); padding: 4px 0 4px 20px; margin: 28px 0 0; }
 .pullquote p { font: 600 24px/1.35 var(--f-display); color: var(--navy); margin: 0; max-width: 44ch; }
-.pullquote cite { display: block; margin-top: 10px; font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-style: normal; }
+.pullquote figcaption { display: block; margin-top: 10px; font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-style: normal; }
 
 /* ---------- header ---------- */
 
@@ -172,6 +173,11 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 }
 .colofon a { color: var(--muted); border-bottom: 0; }
 .colofon a:hover { color: var(--red); }
+/* Penn's required global links: deliberately the quietest line on the page.
+   --muted is 4.87:1 on white, so it clears AA at any size. */
+.legal { margin: 6px 0 0; font: 400 10px/1 var(--f-mono); letter-spacing: .04em; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0 18px; }
+.legal a { color: var(--muted); border-bottom: 0; display: inline-block; padding: 8px 0; }   /* 26px hit area, still 10px type */
+.legal a:hover { color: var(--red); }
 @media (max-width: 900px) { .foot-cols { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 540px) { .foot-cols { grid-template-columns: 1fr; } }
 
