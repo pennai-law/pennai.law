@@ -63,14 +63,6 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 /* ---------- layout ---------- */
 .page { max-width: var(--container); margin-inline: auto; }
 .wrapx { padding-inline: var(--gutter); }
-/* Institutional band: navy, carrying the official Penn Carey Law reverse logo.
-   260px wide renders the mark 47px tall; the "University of Pennsylvania" line
-   is ~9px there, the floor before it stops being legible. */
-.pennbar { background: var(--navy); border-bottom: 4px solid var(--red); }
-.pennbar-inner { display: flex; align-items: center; padding-top: 12px; padding-bottom: 12px; }
-.pennbar-logo-link { border-bottom: 0; display: block; }
-.pennbar-logo { width: 260px; height: auto; display: block; }
-
 /* ---------- shared type ---------- */
 .display-1 {
   font: 700 clamp(44px, 7.5vw, 84px)/0.94 var(--f-display);
@@ -121,21 +113,32 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 .pullquote cite { display: block; margin-top: 10px; font: 500 10.5px/1 var(--f-mono); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-style: normal; }
 
 /* ---------- header ---------- */
+
+/* Masthead: navy band with a Penn-red rule, carrying the official Penn Carey Law
+   reverse logo (5.53:1; 340px wide renders 61px tall, logotype line ~12px), a rule,
+   and the site name as page text in the display face. Nav sits in its own row below. */
 .site-header { border-bottom: 1px solid var(--rule-heavy); }
+.masthead { background: var(--navy); border-bottom: 4px solid var(--red); }
+.brand-link { border-bottom: 0; display: flex; align-items: center; gap: 24px; padding-top: 20px; padding-bottom: 20px; }
+.brand-logo { width: 340px; min-width: 340px; height: auto; display: block; }
+.brand-divider { width: 1px; height: 50px; background: #ffffff; opacity: .45; flex: none; }
+.brand-name {
+  font: 700 36px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
+  color: #ffffff; display: block; white-space: nowrap; padding-top: 2px;
+}
+.brand-link:hover .brand-name { color: var(--on-navy-label); }
 .header-inner {
   max-width: var(--container); margin-inline: auto;
-  display: flex; align-items: center; justify-content: space-between; gap: 32px;
-  padding-top: 18px; padding-bottom: 18px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding-top: 12px; padding-bottom: 12px;
 }
-.brand-link { border-bottom: 0; flex: none; display: block; }
-/* Site masthead: the project name as page text in the display face, not artwork. */
-.brand-name {
-  font: 700 44px/1 var(--f-display); letter-spacing: .05em; text-transform: uppercase;
-  color: var(--navy); display: block;
+@media (max-width: 560px) {
+  .brand-link { gap: 14px; }
+  .brand-logo { width: 220px; min-width: 220px; }
+  .brand-divider { height: 34px; }
+  .brand-name { font-size: 24px; }
 }
-.brand-link:hover .brand-name { color: var(--red); }
-@media (max-width: 560px) { .brand-name { font-size: 32px; } .pennbar-logo { width: 220px; } }
-.main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; width: 100%; justify-content: space-between; }
 .main-nav ul { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .nav-link {
   font: 500 11.5px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase;
