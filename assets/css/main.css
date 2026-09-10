@@ -7,7 +7,6 @@
 :root {
   --navy: #011f5b;
   --red: #990000;
-  --mark-red: #822024;      /* lockup rule + dot ONLY — never interchange with --red */
   --ink: #14171c;
   --prose: #2c333d;
   --lede: #414853;
@@ -122,9 +121,15 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
   padding-top: 18px; padding-bottom: 18px;
 }
-.brand-link { border-bottom: 0; flex: none; }
-.brand-logo { width: 288px; min-width: 288px; height: auto; display: block; }
-/* 288px is the URL-legibility floor (spec §7) — never shrink the mark below it. */
+.brand-link { border-bottom: 0; flex: none; display: flex; align-items: center; gap: 18px; }
+/* Official Penn Carey Law logo (5.53:1). 300px wide renders 54px tall; the
+   "University of Pennsylvania" line is ~10px at that size, the legibility floor. */
+.brand-logo { width: 300px; min-width: 300px; height: auto; display: block; }
+.brand-name {
+  font: 600 15px/1 var(--f-display); letter-spacing: .13em; text-transform: uppercase;
+  color: var(--navy); padding-left: 18px; border-left: 1px solid var(--rule-med); line-height: 30px;
+}
+@media (max-width: 560px) { .brand-name { display: none; } .brand-logo { width: 240px; min-width: 240px; } }
 .main-nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .main-nav ul { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .nav-link {

@@ -1,4 +1,7 @@
-# Brand pipeline
+# Brand pipeline — RETIRED 2026-09-10
+
+> These scripts generate the W2 lockup (tech shield + Rajdhani wordmark), which was retired on 2026-09-10 because it modifies the Penn shield and constitutes a unit-built identity system, both barred by `law.upenn.edu/brand`. The site now uses the official Penn Carey Law logo, unmodified (`static/pcl-logo.png`, from the Communications logo package PEN-23969). Do not re-run these; kept for the record. Decision: Box `Lab/design/2026-09-10-brand-compliance.md`.
+
 
 Generates the Penn Carey Law AI Project lockup (W2: PENN CAREY LAW · PENNAI.LAW eyebrow line,
 text block fitted to the shield's ink mass). Spec: docs/superpowers/specs/2026-07-29-site-redesign-design.md §7.
