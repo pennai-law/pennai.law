@@ -307,10 +307,10 @@ a, button { transition: color .12s ease, background-color .12s ease, border-colo
 }
 
 /* ---------- hero ---------- */
-.hero { padding-top: 64px; padding-bottom: 56px; }
-.hero .display-1 { margin-bottom: 26px; max-width: 15ch; }
+.hero { padding-top: 44px; padding-bottom: 44px; }
+.hero .display-1 { margin-bottom: 20px; max-width: 15ch; }
 .hero .display-1 em { font-style: normal; color: var(--red); }
-.hero .lede { margin-bottom: 34px; }
+.hero .lede { margin-bottom: 26px; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   font: 500 12px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase;
