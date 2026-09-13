@@ -9,7 +9,7 @@ workstream: "02-assessment-tools/mcq-creator"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "pennai-law/mcq-creator"
+github: "pennai-law/exam-tools"
 ---
 
 MCQ Creator is the Project's productized version of the `law-mcq-generator` skill: a faculty-facing tool for drafting multiple-choice exam questions that pass the structural and psychometric quality checks the assessment literature actually expects.
