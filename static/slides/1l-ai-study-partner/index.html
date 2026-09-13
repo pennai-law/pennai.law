@@ -43,6 +43,8 @@ html, body {
 /* 2. Each slide = 16:9 aspect ratio, centered in viewport */
 .slide {
     width: min(100vw, 177.78vh);
+    container-type: size;
+    container-name: slide;
     height: min(100vh, 56.25vw);
     overflow: hidden;
     display: flex;
@@ -68,7 +70,7 @@ html, body {
     max-height: 100%;
     overflow: hidden;
     padding: var(--slide-padding);
-    padding-bottom: clamp(2rem, 5vh, 4rem);
+    padding-bottom: clamp(2rem, 5cqh, 4rem);
     box-sizing: border-box;
 }
 
@@ -85,17 +87,17 @@ html, body {
     --light-gray: #F2F2F2;
 
     /* Typography scale (sized for projection) */
-    --title-size: clamp(2.4rem, 5.5vw, 4rem);
-    --h2-size: clamp(1.8rem, 4vw, 3rem);
-    --h3-size: clamp(1.4rem, 3vw, 2rem);
-    --body-size: clamp(1.6rem, 3.2vw, 2.4rem);
-    --small-size: clamp(1.1rem, 2vw, 1.5rem);
-    --callout-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    --title-size: clamp(2.4rem, 5.5cqw, 4rem);
+    --h2-size: clamp(1.8rem, 4cqw, 3rem);
+    --h3-size: clamp(1.4rem, 3cqw, 2rem);
+    --body-size: clamp(1.6rem, 3.2cqw, 2.4rem);
+    --small-size: clamp(1.1rem, 2cqw, 1.5rem);
+    --callout-size: clamp(1.5rem, 3.5cqw, 2.4rem);
 
     /* Spacing */
-    --slide-padding: clamp(2rem, 5vw, 5rem);
-    --content-gap: clamp(0.5rem, 2vw, 2rem);
-    --element-gap: clamp(0.5rem, 1.5vw, 1.5rem);
+    --slide-padding: clamp(2rem, 5cqw, 5rem);
+    --content-gap: clamp(0.5rem, 2cqw, 2rem);
+    --element-gap: clamp(0.5rem, 1.5cqw, 1.5rem);
 }
 
 /* 5. Base typography */
@@ -115,7 +117,7 @@ p, li, td, th {
 /* 6. Images constrained to viewport */
 img {
     max-width: 100%;
-    max-height: min(50vh, 400px);
+    max-height: min(50cqh, 400px);
     object-fit: contain;
 }
 
@@ -128,13 +130,13 @@ table {
 
 th {
     background: rgba(130, 175, 211, 0.3);
-    padding: clamp(0.4rem, 1vh, 0.8rem) clamp(0.5rem, 1vw, 1rem);
+    padding: clamp(0.4rem, 1cqh, 0.8rem) clamp(0.5rem, 1cqw, 1rem);
     text-align: center;
     font-weight: 400;
 }
 
 td {
-    padding: clamp(0.4rem, 1vh, 0.8rem) clamp(0.5rem, 1vw, 1rem);
+    padding: clamp(0.4rem, 1cqh, 0.8rem) clamp(0.5rem, 1cqw, 1rem);
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -155,35 +157,35 @@ ul li {
    RESPONSIVE BREAKPOINTS
    =========================================== */
 
-@media (max-height: 700px) {
-    :root {
-        --slide-padding: clamp(1rem, 3vw, 3rem);
-        --content-gap: clamp(0.4rem, 1.5vw, 1rem);
-        --title-size: clamp(1.4rem, 4vw, 2.4rem);
-        --h2-size: clamp(1.1rem, 3vw, 1.6rem);
+@container slide (max-height: 700px) {
+    .slide {
+        --slide-padding: clamp(1rem, 3cqw, 3rem);
+        --content-gap: clamp(0.4rem, 1.5cqw, 1rem);
+        --title-size: clamp(1.4rem, 4cqw, 2.4rem);
+        --h2-size: clamp(1.1rem, 3cqw, 1.6rem);
     }
 }
 
-@media (max-height: 600px) {
-    :root {
-        --slide-padding: clamp(0.75rem, 2.5vw, 2rem);
-        --content-gap: clamp(0.3rem, 1vw, 0.75rem);
-        --title-size: clamp(1.2rem, 3.5vw, 2rem);
-        --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+@container slide (max-height: 600px) {
+    .slide {
+        --slide-padding: clamp(0.75rem, 2.5cqw, 2rem);
+        --content-gap: clamp(0.3rem, 1cqw, 0.75rem);
+        --title-size: clamp(1.2rem, 3.5cqw, 2rem);
+        --body-size: clamp(0.7rem, 1.2cqw, 0.95rem);
     }
 }
 
-@media (max-height: 500px) {
-    :root {
-        --slide-padding: clamp(0.5rem, 2vw, 1.5rem);
-        --title-size: clamp(1rem, 3vw, 1.5rem);
-        --body-size: clamp(0.65rem, 1vw, 0.85rem);
+@container slide (max-height: 500px) {
+    .slide {
+        --slide-padding: clamp(0.5rem, 2cqw, 1.5rem);
+        --title-size: clamp(1rem, 3cqw, 1.5rem);
+        --body-size: clamp(0.65rem, 1cqw, 0.85rem);
     }
 }
 
-@media (max-width: 600px) {
-    :root {
-        --title-size: clamp(1.25rem, 7vw, 2.5rem);
+@container slide (max-width: 600px) {
+    .slide {
+        --title-size: clamp(1.25rem, 7cqw, 2.5rem);
     }
 }
 
@@ -220,24 +222,24 @@ ul li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: clamp(0.5rem, 1.5vh, 1.5rem);
-    padding-top: clamp(2.2rem, 5.5vh, 4.4rem);
+    gap: clamp(0.5rem, 1.5cqh, 1.5rem);
+    padding-top: clamp(2.2rem, 5.5cqh, 4.4rem);
     /* No container bottom padding: .title-logo's own padding-bottom is the
        logo's clearance from the frame, so the wordmark hugs the bottom edge. */
     padding-bottom: 0;
 }
 
 .title-shield {
-    margin-bottom: clamp(1rem, 2vh, 2rem);
+    margin-bottom: clamp(1rem, 2cqh, 2rem);
 }
 
 .title-shield .shield-icon {
-    width: clamp(80px, 10vw, 120px);
+    width: clamp(80px, 10cqw, 120px);
     height: auto;
 }
 
 .deck-title {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(2.8rem, 6cqw, 4.5rem);
     color: var(--white);
     line-height: 1.15;
     max-width: 85%;
@@ -247,10 +249,10 @@ ul li {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     width: 60%;
-    /* Explicit breathing room. The old 0.8vh margin leaned on the UA <p>
+    /* Explicit breathing room. The old 0.8cqh margin leaned on the UA <p>
        margins of the subtitle/name lines for its visual gap; those are now
        zeroed (they overflowed the column at 1280x720), so the gap lives here. */
-    margin: clamp(0.8rem, 2.5vh, 1.8rem) auto;
+    margin: clamp(0.8rem, 2.5cqh, 1.8rem) auto;
 }
 
 /* Title-slide paragraphs: no UA margins. The subtitle, author name and date
@@ -265,7 +267,7 @@ ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.1rem, 0.3vh, 0.3rem);
+    gap: clamp(0.1rem, 0.3cqh, 0.3rem);
 }
 
 .title-meta .author-name {
@@ -282,12 +284,12 @@ ul li {
    column goes above it); padding-bottom keeps it clear of the frame. */
 .title-logo {
     margin-top: auto;
-    padding-bottom: clamp(1.2rem, 3vh, 2.4rem);
+    padding-bottom: clamp(1.2rem, 3cqh, 2.4rem);
 }
 
 .title-logo .pcl-logo {
     display: block;
-    width: clamp(220px, 28vw, 340px);
+    width: clamp(220px, 28cqw, 340px);
     height: auto;
 }
 
@@ -296,16 +298,16 @@ ul li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: clamp(0.5rem, 2vh, 2rem);
+    gap: clamp(0.5rem, 2cqh, 2rem);
 }
 
 .section-shield .shield-icon {
-    width: clamp(80px, 10vw, 120px);
+    width: clamp(80px, 10cqw, 120px);
     height: auto;
 }
 
 .section-title {
-    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.4rem, 5.5cqw, 3.8rem);
     color: var(--white);
 }
 
@@ -394,12 +396,12 @@ ul li {
 .subsection-header {
     font-size: var(--h3-size);
     color: var(--penn-gold);
-    margin-top: clamp(1rem, 2.5vw, 2rem);
-    margin-bottom: clamp(0.1rem, 0.3vw, 0.2rem);
+    margin-top: clamp(1rem, 2.5cqw, 2rem);
+    margin-bottom: clamp(0.1rem, 0.3cqw, 0.2rem);
 }
 
 .subsection-header:first-of-type {
-    margin-top: clamp(0.3rem, 1vw, 0.8rem);
+    margin-top: clamp(0.3rem, 1cqw, 0.8rem);
 }
 
 .subsection-quote {
@@ -412,7 +414,7 @@ ul li {
 /* --- Content (Text + Images) --- */
 .two-column {
     display: flex;
-    gap: clamp(3rem, 8vw, 8rem);
+    gap: clamp(3rem, 8cqw, 8rem);
     flex: 1;
     min-height: 0;
     align-items: flex-start;
@@ -435,7 +437,7 @@ ul li {
 
 .col-images img {
     max-width: 100%;
-    max-height: min(40vh, 350px);
+    max-height: min(40cqh, 350px);
     object-fit: contain;
     border-radius: 4px;
 }
@@ -446,7 +448,7 @@ table {
 }
 
 .table-logo {
-    width: clamp(30px, 4vw, 60px);
+    width: clamp(30px, 4cqw, 60px);
     height: auto;
     margin-bottom: 0.3rem;
 }
@@ -477,12 +479,12 @@ p.commentary {
 }
 
 .emphasis-text {
-    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    font-size: clamp(2.4rem, 5.5cqw, 4rem);
     color: var(--penn-gold);
     text-align: center;
     line-height: 1.3;
     max-width: 85%;
-    margin-top: clamp(6rem, 12vh, 10rem);
+    margin-top: clamp(6rem, 12cqh, 10rem);
 }
 
 .emphasis-body {
@@ -510,7 +512,7 @@ p.commentary {
 }
 
 .closing-logo .pcl-logo {
-    width: clamp(400px, 50vw, 600px);
+    width: clamp(400px, 50cqw, 600px);
     height: auto;
 }
 
@@ -519,7 +521,7 @@ p.commentary {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin-bottom: clamp(3rem, 8vh, 6rem);
+    margin-bottom: clamp(3rem, 8cqh, 6rem);
 }
 
 .closing-info .author-name {
@@ -540,7 +542,7 @@ p.commentary {
 }
 
 .qr-code img {
-    width: clamp(120px, 15vw, 180px);
+    width: clamp(120px, 15cqw, 180px);
     height: auto;
     border-radius: 8px;
 }
@@ -574,7 +576,7 @@ p.commentary {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1.5rem, 3vw, 3rem);
+    gap: clamp(1.5rem, 3cqw, 3rem);
     align-content: center;
     padding-top: var(--content-gap);
 }
@@ -585,7 +587,7 @@ p.commentary {
 
 .stats-grid-6 {
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(0.5rem, 1vw, 1rem);
+    gap: clamp(0.5rem, 1cqw, 1rem);
     flex: 0;
 }
 
@@ -594,21 +596,21 @@ p.commentary {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.3rem, 0.8vh, 0.8rem);
+    gap: clamp(0.3rem, 0.8cqh, 0.8rem);
 }
 
 .stat-number {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(3rem, 7cqw, 5.5rem);
     color: var(--penn-gold);
     line-height: 1;
 }
 
 .stats-grid-4 .stat-number {
-    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-size: clamp(3.5rem, 8cqw, 6rem);
 }
 
 .stats-grid-6 .stat-number {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 4cqw, 3rem);
 }
 
 .stat-label {
@@ -628,13 +630,13 @@ p.commentary {
 }
 
 .stat-source {
-    font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+    font-size: clamp(0.6rem, 0.9cqw, 0.8rem);
     color: rgba(255, 255, 255, 0.4);
     font-style: italic;
 }
 
 .stats-footer {
-    font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+    font-size: clamp(0.6rem, 0.9cqw, 0.8rem);
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
     margin-top: auto;
@@ -652,7 +654,7 @@ p.commentary {
 .card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
-    padding: clamp(2rem, 4vw, 4rem) clamp(2.5rem, 5vw, 5rem);
+    padding: clamp(2rem, 4cqw, 4rem) clamp(2.5rem, 5cqw, 5rem);
     max-width: 80%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -661,7 +663,7 @@ p.commentary {
 .card .card-title {
     font-size: var(--h2-size);
     color: var(--penn-blue);
-    margin-bottom: clamp(0.5rem, 1.5vh, 1.5rem);
+    margin-bottom: clamp(0.5rem, 1.5cqh, 1.5rem);
 }
 
 .card .card-body {
@@ -674,21 +676,21 @@ p.commentary {
     font-size: var(--small-size);
     color: var(--penn-red);
     font-style: italic;
-    margin-top: clamp(0.8rem, 2vh, 1.5rem);
+    margin-top: clamp(0.8rem, 2cqh, 1.5rem);
 }
 
 /* --- Card Row --- */
 .card-row {
     flex: 1;
     display: flex;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(1rem, 2cqw, 2rem);
     align-items: stretch;
     padding-top: var(--content-gap);
 }
 
 .card-row .card {
     flex: 1;
-    padding: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1rem, 2cqw, 2rem);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -696,14 +698,14 @@ p.commentary {
 
 .card-row .card .card-title {
     font-size: var(--h3-size);
-    margin-bottom: clamp(0.2rem, 0.5vh, 0.5rem);
+    margin-bottom: clamp(0.2rem, 0.5cqh, 0.5rem);
 }
 
 .card-row .card .card-subtitle {
     font-size: var(--small-size);
     color: var(--penn-red);
     font-style: italic;
-    margin-bottom: clamp(0.5rem, 1vh, 1rem);
+    margin-bottom: clamp(0.5rem, 1cqh, 1rem);
 }
 
 .card-row .card .card-body {
@@ -725,7 +727,7 @@ p.commentary {
 .split-right {
     flex: 1;
     padding: var(--slide-padding);
-    padding-top: clamp(1rem, 3.2vh, 2rem);
+    padding-top: clamp(1rem, 3.2cqh, 2rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -748,7 +750,7 @@ p.commentary {
 .split-right .bullet-list li {
     color: var(--penn-blue);
     line-height: 1.3;
-    font-size: calc(clamp(1.2rem, 2.4vw, 1.75rem) * var(--s0, 1));
+    font-size: calc(clamp(1.2rem, 2.4cqw, 1.75rem) * var(--s0, 1));
     margin-bottom: calc(var(--sib, 0.7) * 1em);
 }
 
@@ -763,8 +765,8 @@ p.commentary {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: clamp(0.5rem, 1vw, 1rem);
-    padding-top: clamp(2rem, 5vh, 4rem);
+    gap: clamp(0.5rem, 1cqw, 1rem);
+    padding-top: clamp(2rem, 5cqh, 4rem);
 }
 
 .timeline-step {
@@ -773,14 +775,14 @@ p.commentary {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.3rem, 0.8vh, 0.8rem);
+    gap: clamp(0.3rem, 0.8cqh, 0.8rem);
     position: relative;
 }
 
 .timeline-step::after {
     content: '';
     position: absolute;
-    top: clamp(18px, 3.5vw, 28px);
+    top: clamp(18px, 3.5cqw, 28px);
     left: 60%;
     width: 80%;
     height: 2px;
@@ -792,8 +794,8 @@ p.commentary {
 }
 
 .step-number {
-    width: clamp(36px, 6vw, 56px);
-    height: clamp(36px, 6vw, 56px);
+    width: clamp(36px, 6cqw, 56px);
+    height: clamp(36px, 6cqw, 56px);
     border-radius: 50%;
     background: var(--penn-gold);
     color: var(--penn-blue);
@@ -820,7 +822,7 @@ p.commentary {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(2.5rem, 5vw, 5rem);
+    gap: clamp(2.5rem, 5cqw, 5rem);
     align-content: center;
     padding-top: var(--content-gap);
 }
@@ -828,12 +830,12 @@ p.commentary {
 .icon-item {
     display: flex;
     align-items: flex-start;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(1rem, 2cqw, 2rem);
 }
 
 .icon-circle {
-    width: clamp(56px, 7vw, 80px);
-    height: clamp(56px, 7vw, 80px);
+    width: clamp(56px, 7cqw, 80px);
+    height: clamp(56px, 7cqw, 80px);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--penn-gold);
@@ -841,7 +843,7 @@ p.commentary {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.5rem, 3cqw, 2.2rem);
     margin-top: 0.15rem;
 }
 
@@ -907,9 +909,9 @@ p.commentary {
 /* --- Slide Numbers --- */
 .slide-number {
     position: absolute;
-    bottom: clamp(0.5rem, 1.5vh, 1rem);
-    left: clamp(0.8rem, 2vw, 1.5rem);
-    font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+    bottom: clamp(0.5rem, 1.5cqh, 1rem);
+    left: clamp(0.8rem, 2cqw, 1.5rem);
+    font-size: clamp(0.55rem, 0.8cqw, 0.7rem);
     color: rgba(255, 255, 255, 0.2);
     font-family: 'Oswald', sans-serif;
 }
@@ -917,8 +919,8 @@ p.commentary {
 /* --- Fullscreen link (every slide, bottom-right) --- */
 .fullscreen-link {
     position: absolute;
-    bottom: clamp(0.5rem, 1.5vh, 1rem);
-    right: clamp(0.8rem, 2vw, 1.5rem);
+    bottom: clamp(0.5rem, 1.5cqh, 1rem);
+    right: clamp(0.8rem, 2cqw, 1.5rem);
     opacity: 0.2;
     transition: opacity 0.2s ease;
     cursor: pointer;
@@ -935,7 +937,7 @@ p.commentary {
 }
 
 .fullscreen-icon {
-    width: clamp(14px, 1.5vw, 20px);
+    width: clamp(14px, 1.5cqw, 20px);
     height: auto;
 }
 
@@ -943,8 +945,8 @@ p.commentary {
 /* On title slide, PDF icon sits to the left of the fullscreen icon */
 .pdf-link {
     position: absolute;
-    bottom: clamp(0.5rem, 1.5vh, 1rem);
-    right: clamp(2.5rem, 4.5vw, 4rem);
+    bottom: clamp(0.5rem, 1.5cqh, 1rem);
+    right: clamp(2.5rem, 4.5cqw, 4rem);
     opacity: 0.2;
     transition: opacity 0.2s ease;
     line-height: 0;
@@ -955,15 +957,15 @@ p.commentary {
 }
 
 .pdf-icon {
-    width: clamp(14px, 1.5vw, 20px);
+    width: clamp(14px, 1.5cqw, 20px);
     height: auto;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .pdf-download {
     position: absolute;
-    bottom: clamp(1.5rem, 3vh, 2.5rem);
-    right: clamp(1.5rem, 3vw, 3rem);
+    bottom: clamp(1.5rem, 3cqh, 2.5rem);
+    right: clamp(1.5rem, 3cqw, 3rem);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -977,7 +979,7 @@ p.commentary {
 }
 
 .pdf-download .pdf-dl-icon {
-    width: clamp(24px, 3vw, 36px);
+    width: clamp(24px, 3cqw, 36px);
     height: auto;
     color: inherit;
 }
@@ -998,10 +1000,10 @@ p.commentary {
 
 /* --- Title subtitle (directly under the deck title, ~75% of its size) --- */
 .deck-subtitle {
-    font-size: clamp(2.1rem, 4.5vw, 3.375rem);
+    font-size: clamp(2.1rem, 4.5cqw, 3.375rem);
     color: var(--white);
     opacity: 0.85;
-    margin: clamp(0.4rem, 1vh, 0.9rem) 0 0;
+    margin: clamp(0.4rem, 1cqh, 0.9rem) 0 0;
     line-height: 1.2;
 }
 
@@ -1042,7 +1044,7 @@ p.commentary {
     margin-left: 0.7em;
     color: #8aa0c0;
     font-family: Menlo, Consolas, monospace;
-    font-size: clamp(0.75rem, 1.3vw, 1rem);
+    font-size: clamp(0.75rem, 1.3cqw, 1rem);
 }
 
 .cp-body {
@@ -1050,7 +1052,7 @@ p.commentary {
     padding: 0.85em 1.3em;
     white-space: pre-wrap;
     font-family: Menlo, Consolas, 'SF Mono', monospace;
-    font-size: clamp(0.95rem, 1.7vw, 1.35rem);
+    font-size: clamp(0.95rem, 1.7cqw, 1.35rem);
     line-height: 1.5;
     color: #cdd6e4;
 }
@@ -1061,9 +1063,9 @@ p.commentary {
 /* Verbatim-file variant: small type, capped height, fade-out = "more below". */
 .cp-scroll {
     position: relative;
-    max-height: 63vh;
+    max-height: 63cqh;
     overflow: hidden;
-    font-size: clamp(0.62rem, 1.12vw, 0.86rem);
+    font-size: clamp(0.62rem, 1.12cqw, 0.86rem);
     line-height: 1.42;
 }
 
@@ -1080,7 +1082,7 @@ p.commentary {
 .code-explain {
     flex: 1;
     display: flex;
-    gap: clamp(1.3rem, 3vw, 2.6rem);
+    gap: clamp(1.3rem, 3cqw, 2.6rem);
     align-items: stretch;
     min-height: 0;
     padding-top: 0.2em;
@@ -1100,7 +1102,7 @@ p.commentary {
     max-height: none;
     overflow: hidden;
     position: relative;
-    font-size: clamp(0.45rem, 0.8vw, 0.64rem);
+    font-size: clamp(0.45rem, 0.8cqw, 0.64rem);
     line-height: 1.38;
 }
 
@@ -1128,7 +1130,7 @@ p.commentary {
     line-height: 1.3;
     position: relative;
     padding-left: 1.1em;
-    font-size: calc(clamp(1.45rem, 2.8vw, 2.1rem) * var(--s0, 1));
+    font-size: calc(clamp(1.45rem, 2.8cqw, 2.1rem) * var(--s0, 1));
     margin-bottom: calc(var(--sib, 0.78) * 1em);
 }
 
@@ -1177,7 +1179,7 @@ p.commentary {
     flex: 0 0 auto;
     margin: 0;
     font-family: Menlo, Consolas, monospace;
-    font-size: clamp(0.75rem, 1.3vw, 1rem);
+    font-size: clamp(0.75rem, 1.3cqw, 1rem);
     color: var(--penn-light-blue);
     opacity: 0.85;
     text-align: center;
@@ -1209,7 +1211,7 @@ p.commentary {
     display: block;
 }
 
-.svg-cap { font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+.svg-cap { font-size: clamp(1.6rem, 3.4cqw, 2.4rem); }
 
 /* --- Figure card: a color chart on a white card over the navy background. --- */
 .fig-slide {
@@ -1220,7 +1222,7 @@ p.commentary {
 
 .fig-img {
     max-width: 94%;
-    max-height: 70vh;
+    max-height: 70cqh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1235,7 +1237,7 @@ p.commentary {
     margin-top: 0.6em;
     color: var(--penn-gold);
     font-style: italic;
-    font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+    font-size: clamp(1.15rem, 2.4cqw, 1.7rem);
     line-height: 1.3;
     text-align: center;
     width: min(90%, 1080px);
@@ -1244,25 +1246,25 @@ p.commentary {
 /* Large-figure variant: trim the title chrome to give the chart ~1.5x the
    footprint. */
 .fig-slide-lg .slide-title {
-    font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+    font-size: clamp(1.5rem, 3.2cqw, 2.3rem);
     margin-bottom: 0.05em;
 }
 
 .fig-slide-lg .fig-img {
     width: min(100%, 1180px);
     height: auto;
-    max-height: 84vh;
+    max-height: 84cqh;
     margin-top: 0.1em;
 }
 
 /* --- Small footnote-style note pinned to the slide bottom (stats caveats). --- */
 .slide-note {
     margin-top: auto;
-    padding: clamp(0.5rem, 1.6vh, 1.1rem) var(--slide-padding) 0;
+    padding: clamp(0.5rem, 1.6cqh, 1.1rem) var(--slide-padding) 0;
     text-align: center;
     color: var(--penn-light-blue);
     font-style: italic;
-    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.6cqw, 1.2rem);
     opacity: 0.9;
     line-height: 1.3;
 }
@@ -1270,7 +1272,7 @@ p.commentary {
 /* A callout after a split-screen needs side + bottom safe-area padding. */
 .split-screen ~ .callout {
     padding: var(--content-gap) var(--slide-padding)
-             clamp(1rem, 2.5vh, 2rem) var(--slide-padding);
+             clamp(1rem, 2.5cqh, 2rem) var(--slide-padding);
     box-sizing: border-box;
 }
 
@@ -1287,7 +1289,7 @@ p.commentary {
     width: min(88%, 1180px);
     text-align: center;
     color: var(--penn-gold);
-    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-size: clamp(2.6rem, 5cqw, 3.8rem);
     line-height: 1.3;
 }
 
@@ -1303,12 +1305,12 @@ p.commentary {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(1.4rem, 3.6vw, 3rem);
+    gap: clamp(1.4rem, 3.6cqw, 3rem);
 }
 
 .closing-logo.cobrand .pcl-logo,
 .closing-logo.cobrand .cobrand-logo {
-    height: clamp(74px, 12vh, 98px);
+    height: clamp(74px, 12cqh, 98px);
     width: auto;
 }
 
@@ -1316,15 +1318,15 @@ p.commentary {
 .qr-block {
     position: absolute;
     top: auto;
-    right: clamp(1.6rem, 4vw, 3.6rem);
-    bottom: clamp(1.4rem, 4vh, 3rem);
+    right: clamp(1.6rem, 4cqw, 3.6rem);
+    bottom: clamp(1.4rem, 4cqh, 3rem);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .qr-img {
-    width: clamp(112px, 12.5vw, 162px);
+    width: clamp(112px, 12.5cqw, 162px);
     height: auto;
     background: #fff;
     padding: 6px;
@@ -1337,43 +1339,43 @@ p.commentary {
     color: var(--penn-gold);
     font-weight: 600;
     letter-spacing: 0.02em;
-    font-size: clamp(0.95rem, 1.7vw, 1.25rem);
+    font-size: clamp(0.95rem, 1.7cqw, 1.25rem);
 }
 
 .qr-url {
     margin: 0.1em 0 0;
     color: #cdd6e4;
-    font-size: clamp(0.7rem, 1.2vw, 0.92rem);
+    font-size: clamp(0.7rem, 1.2cqw, 0.92rem);
 }
 
 /* === DECK-SPECIFIC CSS === */
 
 /* 1L deck: AI Project lockup on the title slide (logo + rule + name as text) */
-.title-logo.ai-lockup { display: flex; align-items: center; justify-content: center; gap: clamp(0.9rem, 1.8vw, 1.6rem); }
-.title-logo.ai-lockup .pcl-logo { width: clamp(300px, 34vw, 440px); height: auto; }
-.ai-lockup-rule { display: block; width: 2px; height: clamp(40px, 5.4vw, 70px); background: rgba(255,255,255,0.85); }
-.ai-lockup-name { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: clamp(2rem, 4.2vw, 3.4rem); letter-spacing: 0.06em; color: #fff; line-height: 1; white-space: nowrap; }
+.title-logo.ai-lockup { display: flex; align-items: center; justify-content: center; gap: clamp(0.9rem, 1.8cqw, 1.6rem); }
+.title-logo.ai-lockup .pcl-logo { width: clamp(300px, 34cqw, 440px); height: auto; }
+.ai-lockup-rule { display: block; width: 2px; height: clamp(40px, 5.4cqw, 70px); background: rgba(255,255,255,0.85); }
+.ai-lockup-name { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: clamp(2rem, 4.2cqw, 3.4rem); letter-spacing: 0.06em; color: #fff; line-height: 1; white-space: nowrap; }
 /* 1L deck: role line on the title slide */
 .title-meta .author-role { font-size: var(--h3-size); color: var(--white); }
-.title-meta .date { font-size: clamp(1.1rem, 2.2vw, 1.5rem); opacity: 0.85; }
+.title-meta .date { font-size: clamp(1.1rem, 2.2cqw, 1.5rem); opacity: 0.85; }
 /* 1L deck: larger closing lines on the optional, trainer, and routines slides (Polk, 2026-09-13) */
-.slide:nth-of-type(3) .callout { font-size: clamp(2.4rem, 4.9vw, 3.8rem); line-height: 1.15; }
-.slide:nth-of-type(5) .svg-cap { font-size: clamp(2rem, 4.1vw, 3.2rem); line-height: 1.15; }
-.slide:nth-of-type(6) .svg-cap { font-size: clamp(2.1rem, 4.3vw, 3.3rem); line-height: 1.15; white-space: nowrap; }
-.slide:nth-of-type(6) .svg-card { margin-top: clamp(0.5rem, 2vh, 1.5rem); }
-.slide:nth-of-type(7) .fig-caption { font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.1; margin-bottom: 0; }
-.slide:nth-of-type(7) .fig-note { margin: 0.15em 0 0; color: var(--penn-light-blue); font-style: italic; font-size: clamp(1.15rem, 2.1vw, 1.55rem); line-height: 1.1; text-align: center; }
+.slide:nth-of-type(3) .callout { font-size: clamp(2.4rem, 4.9cqw, 3.8rem); line-height: 1.15; }
+.slide:nth-of-type(5) .svg-cap { font-size: clamp(2rem, 4.1cqw, 3.2rem); line-height: 1.15; }
+.slide:nth-of-type(6) .svg-cap { font-size: clamp(2.1rem, 4.3cqw, 3.3rem); line-height: 1.15; white-space: nowrap; }
+.slide:nth-of-type(6) .svg-card { margin-top: clamp(0.5rem, 2cqh, 1.5rem); }
+.slide:nth-of-type(7) .fig-caption { font-size: clamp(1.8rem, 3.4cqw, 2.7rem); line-height: 1.1; margin-bottom: 0; }
+.slide:nth-of-type(7) .fig-note { margin: 0.15em 0 0; color: var(--penn-light-blue); font-style: italic; font-size: clamp(1.15rem, 2.1cqw, 1.55rem); line-height: 1.1; text-align: center; }
 /* 1L deck: resource-guide closing slide */
 .rg-slide { align-items: stretch; justify-content: flex-start; text-align: left; }
-.rg-wrap { flex: 1; min-height: 0; display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 3rem); }
-.rg-left { position: static; flex: 0 0 clamp(280px, 33vw, 420px); display: flex; flex-direction: column; align-items: center; }
-.rg-qr { width: clamp(200px, 24vw, 300px); height: auto; background: #fff; padding: 8px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.4); }
-.rg-url { margin: 0.6em 0 0; color: var(--penn-gold); font-size: clamp(1.6rem, 3.1vw, 2.5rem); letter-spacing: 0.01em; white-space: nowrap; }
-.rg-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: clamp(0.6rem, 1.8vh, 1.2rem); font-size: clamp(1.2rem, 2.3vw, 1.7rem); line-height: 1.28; color: var(--white); }
+.rg-wrap { flex: 1; min-height: 0; display: flex; align-items: center; gap: clamp(1.2rem, 3cqw, 3rem); }
+.rg-left { position: static; flex: 0 0 clamp(280px, 33cqw, 420px); display: flex; flex-direction: column; align-items: center; }
+.rg-qr { width: clamp(200px, 24cqw, 300px); height: auto; background: #fff; padding: 8px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.4); }
+.rg-url { margin: 0.6em 0 0; color: var(--penn-gold); font-size: clamp(1.6rem, 3.1cqw, 2.5rem); letter-spacing: 0.01em; white-space: nowrap; }
+.rg-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: clamp(0.6rem, 1.8cqh, 1.2rem); font-size: clamp(1.2rem, 2.3cqw, 1.7rem); line-height: 1.28; color: var(--white); }
 .rg-list li { font-size: inherit; margin-bottom: 0; padding-left: 1.1em; position: relative; }
 .rg-list li::before { content: "•"; position: absolute; left: 0; color: var(--penn-gold); }
-.rg-note { margin: clamp(0.4rem, 1.2vh, 0.9rem) 0 0; color: var(--white); opacity: 0.88; font-style: italic; font-size: clamp(1.2rem, 2.3vw, 1.7rem); }
-.rg-contact { margin: clamp(0.3rem, 1vh, 0.7rem) 0 0; color: var(--white); font-size: clamp(1.3rem, 2.5vw, 1.9rem); opacity: 0.95; }
+.rg-note { margin: clamp(0.4rem, 1.2cqh, 0.9rem) 0 0; color: var(--white); opacity: 0.88; font-style: italic; font-size: clamp(1.2rem, 2.3cqw, 1.7rem); }
+.rg-contact { margin: clamp(0.3rem, 1cqh, 0.7rem) 0 0; color: var(--white); font-size: clamp(1.3rem, 2.5cqw, 1.9rem); opacity: 0.95; }
 
 </style>
 </head>
