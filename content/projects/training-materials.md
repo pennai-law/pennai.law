@@ -9,7 +9,7 @@ workstream: "06-training"
 status: active
 pillar: ["teach", "build"]
 owner: ["TBD"]
-github: "pennai-law/training-materials"
+github: "pennai-law/penn-law-ai-resources"
 ---
 
 Training Materials produces a complete AI training package for legal-education audiences — modules, exercises, microsites, and the accompanying media — and pitches a cross-Penn version of the same package in collaboration with Bhuvnesh Jain.
