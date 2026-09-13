@@ -21,8 +21,17 @@
 /* ===========================================
    VIEWPORT FITTING: MANDATORY BASE STYLES
    Include this ENTIRE file in every presentation.
-   These styles ensure slides fit exactly in the viewport
-   at 16:9 widescreen.
+
+   Sizing model (2026-09-13): every slide is a fixed 1280x720 design
+   canvas, scaled uniformly to fit the viewport. Nothing inside a slide
+   may reference the viewport (vw/vh); box-relative sizes use container
+   units (cqw/cqh: 1cqw = 12.8px, 1cqh = 7.2px) or plain px/rem, all of
+   which scale together with the canvas. A deck that passes QA at
+   1280x720 therefore renders identically on a 4:3 projector, a 16:10
+   laptop, a 5120x1440 ultrawide, or a 4K panel: letterboxed, never
+   clipped, never undersized. The earlier vw/vh + clamp() scheme saturated
+   at its rem bounds above ~1160px wide, so the type stopped scaling while
+   the box kept changing: overflow on small boxes, miniature on large ones.
    Forked from frontend-slides, adapted for Penn Carey Law format.
    =========================================== */
 
@@ -40,19 +49,23 @@ html, body {
     justify-content: center;
 }
 
-/* 2. Each slide = 16:9 aspect ratio, centered in viewport */
+/* 2. Each slide = fixed 1280x720 canvas, scaled to fit and centered.
+   --slide-scale is the smaller of viewport-width/1280 and
+   viewport-height/720 (tan(atan2(a, b)) is CSS's way to divide two
+   lengths into a unitless number; Chrome 111+, Safari 15.4+, Firefox 118+).
+   container-type: size makes cqw/cqh resolve against this box. */
 .slide {
-    width: min(100vw, 177.78vh);
+    width: 1280px;
+    height: 720px;
     container-type: size;
     container-name: slide;
-    height: min(100vh, 56.25vw);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(var(--slide-scale));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,8 +87,10 @@ html, body {
     box-sizing: border-box;
 }
 
-/* 4. Responsive typography with clamp() */
+/* 4. Scale factor, palette, typography scale */
 :root {
+    --slide-scale: min(tan(atan2(100vw, 1280px)), tan(atan2(100vh, 720px)));
+
     /* Penn color palette */
     --penn-blue: #011F5B;
     --penn-red: #990000;
@@ -86,7 +101,9 @@ html, body {
     --off-white: #F7F7F7;
     --light-gray: #F2F2F2;
 
-    /* Typography scale (sized for projection) */
+    /* Typography scale (sized for projection). clamp() is kept for
+       readability of the design intent; on the fixed canvas each
+       resolves to a constant (e.g. --title-size = 64px). */
     --title-size: clamp(2.4rem, 5.5cqw, 4rem);
     --h2-size: clamp(1.8rem, 4cqw, 3rem);
     --h3-size: clamp(1.4rem, 3cqw, 2rem);
@@ -154,40 +171,10 @@ ul li {
 }
 
 /* ===========================================
-   RESPONSIVE BREAKPOINTS
+   MOTION
+   (No viewport breakpoints: the canvas is fixed, so nothing
+   viewport-dependent is left to adapt.)
    =========================================== */
-
-@container slide (max-height: 700px) {
-    .slide {
-        --slide-padding: clamp(1rem, 3cqw, 3rem);
-        --content-gap: clamp(0.4rem, 1.5cqw, 1rem);
-        --title-size: clamp(1.4rem, 4cqw, 2.4rem);
-        --h2-size: clamp(1.1rem, 3cqw, 1.6rem);
-    }
-}
-
-@container slide (max-height: 600px) {
-    .slide {
-        --slide-padding: clamp(0.75rem, 2.5cqw, 2rem);
-        --content-gap: clamp(0.3rem, 1cqw, 0.75rem);
-        --title-size: clamp(1.2rem, 3.5cqw, 2rem);
-        --body-size: clamp(0.7rem, 1.2cqw, 0.95rem);
-    }
-}
-
-@container slide (max-height: 500px) {
-    .slide {
-        --slide-padding: clamp(0.5rem, 2cqw, 1.5rem);
-        --title-size: clamp(1rem, 3cqw, 1.5rem);
-        --body-size: clamp(0.65rem, 1cqw, 0.85rem);
-    }
-}
-
-@container slide (max-width: 600px) {
-    .slide {
-        --title-size: clamp(1.25rem, 7cqw, 2.5rem);
-    }
-}
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
