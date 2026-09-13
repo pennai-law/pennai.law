@@ -2,7 +2,7 @@
 title: "1L Guidance on AI Use"
 description: "Written for incoming 1Ls. How LLMs work, their strengths and weaknesses, the human-AI-human workflow, course rules, confidentiality, and prompting tips."
 date: 2025-09-01
-lastmod: 2026-08-04
+lastmod: 2026-09-13
 weight: 10
 toolkit_category: "audience"
 toolkit_group: "student"
@@ -14,6 +14,8 @@ version: "September 2025; revised August 2026"
 Written for incoming 1Ls. This guide explains how to use AI tools as study support without substituting them for legal reasoning.
 
 **First and most important:** course-specific rules control. General Project guidance does not override a syllabus, assignment instruction, exam rule, clinic rule, journal rule, or supervisor instruction. When in doubt, ask the professor before using AI.
+
+**Newer and more hands-on:** the [1L guide to using Penn Claude as a study partner](https://resources.pennai.law/1L-guide) (Fall 2026) carries the traffic light, study routines, tool setup, and the learning science from the 1L talk. This page remains the longer treatment of how the models work and the human-AI-human workflow.
 
 For current Penn Carey Law tool access and setup, use the [AI Resources Portal](https://resources.pennai.law/).
 
