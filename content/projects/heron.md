@@ -9,7 +9,6 @@ weight: 40
 workstream: "03-teaching-tools/heron"
 status: active
 pillar: ["build", "teach"]
-owner: ["R. Polk Wagner"]
 ---
 
 **Heron is a virtual teaching assistant for a single course — a chatbot students talk to in Slack.** Ask it about a case, a doctrine, or the week's reading, and it answers from *that course's own materials* — the assigned readings, slides, and class transcripts — citing the exact page or timestamp so a student can check the source, and saying so plainly when the materials don't cover the question. It is named for Heron of Alexandria, the first-century engineer of steam toys and automatic doors: a fitting namesake for a course about invention.

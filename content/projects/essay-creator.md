@@ -8,7 +8,6 @@ weight: 30
 workstream: "02-assessment-tools/essay-creator"
 status: active
 pillar: ["build", "teach"]
-owner: ["TBD"]
 github: "pennai-law/exam-tools"
 ---
 

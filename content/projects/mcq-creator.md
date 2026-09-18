@@ -8,7 +8,6 @@ weight: 40
 workstream: "02-assessment-tools/mcq-creator"
 status: active
 pillar: ["build", "teach"]
-owner: ["TBD"]
 github: "pennai-law/exam-tools"
 ---
 

@@ -8,7 +8,6 @@ cluster: "artifact"
 workstream: "07-artifacts/legal-education-velocity"
 status: shipped
 pillar: ["teach"]
-owner: ["Polk Wagner"]
 artifact_url: "https://polkwagner.com/legal-education"
 ---
 
