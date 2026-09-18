@@ -8,7 +8,6 @@ weight: 30
 workstream: "03-teaching-tools/course-website-tooling"
 status: planning
 pillar: ["build", "teach"]
-owner: ["TBD"]
 ---
 
 Course-Website Tooling is the build layer underneath the Project's Training Materials work. It generalizes the Legal Education at Model Velocity microsite — the four-module microsite, the cloned-voice podcast pipeline, the NotebookLM audio overview, the auto-generated PDF summaries — into reusable templates that future training packages and course microsites can deploy without rebuilding from scratch.

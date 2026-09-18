@@ -14,7 +14,6 @@
       <dl>
         {{ with .Params.status }}<dt>Status</dt><dd><span class="row-status is-{{ . }}">{{ index (dict "active" "Active" "planning" "Planning" "shipped" "Shipped") . | default . }}</span></dd>{{ end }}
         {{ with .Params.pillar }}<dt>Pillar</dt><dd><span class="row-tags">{{ range . }}<b>{{ . }}</b>{{ end }}</span></dd>{{ end }}
-        {{ with .Params.owner }}<dt>Owner</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
         <dt>Cluster</dt><dd>{{ $clusterName }}</dd>
         {{ with .Lastmod }}<dt>Updated</dt><dd>{{ .Format "January 2, 2006" }}</dd>{{ end }}
       </dl>

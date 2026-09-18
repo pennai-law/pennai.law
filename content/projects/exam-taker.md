@@ -9,7 +9,6 @@ weight: 20
 workstream: "02-assessment-tools/exam-taker"
 status: active
 pillar: ["research", "build"]
-owner: ["Tulio Tagliaferri '27"]
 ---
 
 Exam Taker is the test-subject side of the Project's exam work. The pipeline puts a current AI model in the seat of a law student: it answers real Penn Carey Law finals — the same exams enrolled students sit for — and the answers go into the live grading stack to be scored blind, on the curve, by the faculty who wrote them.

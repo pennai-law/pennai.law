@@ -9,7 +9,6 @@ weight: 10
 workstream: "02-assessment-tools/exam-grader"
 status: active
 pillar: ["build", "research"]
-owner: ["Tulio Tagliaferri '27"]
 ---
 
 Exam Grader is the Project's calibration-based grading tool for law-school essay exams. The model doesn't grade in a vacuum — it grades against a calibration set the faculty member has already scored, learning the rubric from worked examples before scoring the rest of the stack.

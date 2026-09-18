@@ -8,7 +8,6 @@ cluster: "training"
 workstream: "06-training"
 status: active
 pillar: ["teach", "build"]
-owner: ["TBD"]
 github: "pennai-law/penn-law-ai-resources"
 ---
 

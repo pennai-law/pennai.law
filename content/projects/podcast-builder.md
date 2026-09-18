@@ -8,7 +8,6 @@ weight: 60
 workstream: "03-teaching-tools/podcast-builder"
 status: planning
 pillar: ["build", "teach"]
-owner: ["TBD"]
 ---
 
 Podcast Builder produces short (10–12 minute) NPR-style conversations among multiple speakers as an alternative entry point into material faculty and students would otherwise only get as a written pre-read. A general-purpose AI model handles source analysis, pedagogy framing, script architecture, and production editing; ElevenLabs (Studio, Text-to-Dialogue API, hosted MCP) handles voice casting, multi-speaker synthesis, and export. The faculty-facing workflow stays simple — advanced model in, finished audio out — while the automation layer this project builds does the coordination between the two.

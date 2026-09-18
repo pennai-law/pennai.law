@@ -8,7 +8,6 @@ cluster: "judiciary"
 workstream: "04-judiciary"
 status: active
 pillar: ["teach"]
-owner: ["Jackie Wang '27", "Hailey Parikh '27"]
 github: "pennai-law/judiciary"
 artifact_url: "https://judges.pennai.law/"
 ---

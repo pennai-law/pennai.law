@@ -9,7 +9,6 @@ weight: 10
 workstream: "03-teaching-tools/course-materials"
 status: active
 pillar: ["build", "teach"]
-owner: ["TBD"]
 github: "pennai-law/course-materials"
 ---
 
