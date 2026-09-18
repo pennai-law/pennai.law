@@ -2,7 +2,7 @@
 title: "Newsletter Automation"
 description: "Build the pipeline that produces the Project's monthly AI newsletter — automated collection, editorial workflow, Substack distribution."
 date: 2026-05-08
-lastmod: 2026-05-09
+lastmod: 2026-09-18
 draft: false
 cluster: "newsletter"
 workstream: "05-newsletter"
@@ -10,7 +10,7 @@ status: active
 pillar: ["build", "teach"]
 ---
 
-Newsletter Automation is the build side of the Project's monthly AI Updates newsletter. The newsletter has been publishing since February 2025; the project here is the pipeline that produces it — automated collection of candidate items through the month, an editorial workflow that surfaces what's worth including, and Substack as the distribution layer.
+Newsletter Automation is the build side of the Project's monthly AI Updates newsletter. The newsletter itself has gone out monthly to the Penn Carey Law community since February 2025; this project is the pipeline that produces it and the work of giving it a public home — automated collection of candidate items through the month, an editorial workflow that surfaces what's worth including, and Substack as the distribution layer. Until that public archive ships, past issues aren't yet browsable on this site.
 
 The point is to get the editorial pass focused on *selecting* and *writing*, not hunting for material.
 
@@ -26,4 +26,4 @@ The newsletter is the Project's most public, regular touch point with the legal-
 
 ## Status
 
-Active. Newsletter is publishing monthly; Substack migration in progress; collection pipeline being formalized.
+Active. The newsletter itself is already monthly; the public archive and Substack migration are in progress — that's why the site's Newsletter link is still marked "coming soon." Collection pipeline being formalized.

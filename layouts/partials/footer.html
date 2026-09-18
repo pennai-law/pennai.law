@@ -26,7 +26,12 @@
   </div>
   <p class="colofon">
     <span>&copy; 2026 The Trustees of the University of Pennsylvania &middot; {{ site.Params.brandFormalName }} &middot; pennai.law</span>
-    <span><a href="/license/">CC BY 4.0 content &middot; Apache 2.0 code</a> &middot; Updated {{ .Lastmod.Format "January 2, 2006" }}</span>
+    {{- /* .Lastmod is per-page and defaults to the zero Go time (Jan 1, 0001) on any
+          page without a `date`/`lastmod` front-matter field. Fall back to site.Lastmod
+          (the max Lastmod across all regular pages) so the stamp is never a zero date. */ -}}
+    {{- $lastmod := .Lastmod -}}
+    {{- if $lastmod.IsZero -}}{{ $lastmod = site.Lastmod }}{{- end -}}
+    <span><a href="/license/">CC BY 4.0 content &middot; Apache 2.0 code</a> &middot; Updated {{ $lastmod.Format "January 2, 2006" }}</span>
   </p>
   {{- /* The five global links Penn's web-identity standard requires on every Penn page
         (branding.web-resources.upenn.edu/web-identity). Kept small and quiet on purpose. */ -}}

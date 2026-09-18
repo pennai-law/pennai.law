@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  {{ partial "header.html" . }}
+  <main id="main" class="page" tabindex="-1">
+    <article class="wrapx">
+      <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; <b>Page not found</b></p>
+      <header class="page-header">
+        <h1 class="display-2">Page not found</h1>
+        <p class="lede">This page doesn't exist, or it moved. Try one of these instead.</p>
+      </header>
+      <div class="cta" style="padding-top:8px; padding-bottom:56px">
+        <a class="btn solid" href="/">Home</a>
+        <a class="btn" href="/projects/">Projects</a>
+        <a class="btn" href="/toolkit/">Toolkit</a>
+        <a class="btn" href="/contact/">Contact</a>
+      </div>
+    </article>
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>
