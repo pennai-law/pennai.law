@@ -2,7 +2,7 @@
 title: "Accessibility"
 description: "The Penn Carey Law AI Project's accessibility commitments and how to report a barrier."
 date: 2026-05-09
-lastmod: 2026-05-09
+lastmod: 2026-09-18
 ---
 
 The Penn Carey Law AI Project is committed to digital accessibility for the entire Penn Carey Law community and the broader public. This site is built to meet the [University of Pennsylvania's digital accessibility policy](https://accessibility.web-resources.upenn.edu/overview-accessibility-penn/standards) and the [Web Content Accessibility Guidelines (WCAG) 2.2 Level AA](https://www.w3.org/TR/WCAG22/).
@@ -11,16 +11,18 @@ The Penn Carey Law AI Project is committed to digital accessibility for the enti
 
 This site targets **WCAG 2.2, Level AA conformance**, the standard Penn applies to University websites created or significantly revised after July 1, 2024.
 
-## What we do to support accessibility
+## What this site is built to do
 
 - **Semantic HTML** — every page uses standard landmark elements (`<header>`, `<nav>`, `<main>`, `<footer>`) so assistive technologies can navigate the structure.
 - **Skip-to-content link** — keyboard users can bypass the header and jump directly to page content.
 - **Visible focus indicators** — every interactive element shows a Penn-Red outline on keyboard focus.
-- **Contrast** — body text and link colors meet or exceed WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text and non-text indicators).
-- **Keyboard support** — all features, including the search dialog, are operable without a mouse. The dialog traps focus while open and closes with the Escape key.
+- **Contrast** — body text and link colors meet or exceed WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text and non-text indicators), verified by automated testing (axe) across the site.
+- **Keyboard support** — every feature, including the search dialog, is designed to be operable without a mouse; the dialog is designed to trap focus while open and close with the Escape key. A full manual keyboard and screen-reader pass is in progress and not yet complete — if you find something that doesn't work, please report it below.
 - **Screen-reader text** — external links and icon-only buttons include text for assistive technologies, including a "(opens in new tab)" announcement on links that open externally.
 - **Reduced motion** — animations and transitions are suppressed for users who set `prefers-reduced-motion` at the OS level.
 - **Plain language** — Toolkit and project pages are written for direct, scannable reading.
+
+Automated scanning (axe) currently finds zero violations across the site. Automated tools catch a meaningful share of issues but not all of them — the manual verification above is what closes that gap, and it's still open.
 
 ## Known limitations
 

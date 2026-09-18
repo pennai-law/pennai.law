@@ -1,6 +1,8 @@
 ---
 title: "Join the Project"
 description: "Work with the Penn Carey Law AI Project — open roles, how we work, and how to apply."
+date: 2026-05-10
+lastmod: 2026-09-18
 ---
 
 The **Penn Carey Law AI Project** hires research assistants and project leads who want to work at the front edge of AI and the law. We research how AI is changing legal practice, legal education, and the law itself; build the tools that put those findings to work; and teach law students, faculty, judges, and the profession how to use AI well.
@@ -23,7 +25,7 @@ The Project runs eight workstreams across the three pillars — Research, Build,
 
 - **Open source by default.** Public GitHub, public website, no-login access where we can manage it. What you build is openly attributed and goes on your CV.
 - **Markdown-first.** Most things start as a doc. We write in Markdown, ship on GitHub, and generate polished deliverables from there.
-- **Self-directed.** Summer is short. We hand you a real problem and a partner, and trust you to ship.
+- **Self-directed.** We hand you a real problem and a partner, and trust you to ship.
 - **Tools real people use.** We build for actual workflows — students, faculty, chambers, firms — not for demos.
 
 ## Who we look for
@@ -40,16 +42,16 @@ Some roles welcome non-law backgrounds where the technical or pedagogical fit is
 ## Roles and logistics
 
 - **Paid or for credit** — $25/hr, or up to two ungraded credits per semester in place of pay. Summer work is credited in the fall.
-- **Time** — roughly 10–15 hours/week over the summer; flexible during the academic year.
-- **Location and cadence** — fully remote for the summer. Almost all our work happens on Slack, with weekly Zoom check-ins and project updates.
-- **Term** — Summer 2026, with the possibility of extension into the academic year for most roles.
+- **Time** — roughly 10–15 hours/week, with more flexibility during the academic year.
+- **Location and cadence** — fully remote. Almost all our work happens on Slack, with weekly Zoom check-ins and project updates.
+- **Term** — Ongoing. Most roles run summer through the academic year; the Project also takes on new hires mid-year.
 - **Eligibility** — JD students, recent JD grads, and graduate students with relevant skills.
 
 See the [full role list and current openings](/projects/).
 
 ## How to apply
 
-Email **[pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)** with the subject line **Penn Carey Law AI Project Application — <Role>**, and include:
+Email **[pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)** with the subject line **Penn Carey Law AI Project Application — [Role]** (replace `[Role]` with the workstream or role you're applying for), and include:
 
 1. A short statement of interest — which role or roles you want, and what you'd want to build first.
 2. Your CV or résumé.

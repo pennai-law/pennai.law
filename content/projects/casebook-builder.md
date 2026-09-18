@@ -1,8 +1,8 @@
 ---
 title: "Casebook Builder"
-description: "Curate and edit cases into custom course casebooks at a fraction of the commercial cost — faculty pilots in Torts and Patents (Fall 2026) and Legislation (Spring 2027)."
+description: "Curate and edit cases into custom course casebooks at a fraction of the commercial cost — live in Torts (Fall 2026), with Patent Law and Legislation pilots in Spring 2027."
 date: 2026-05-09
-lastmod: 2026-06-16
+lastmod: 2026-09-18
 draft: false
 cluster: "teaching-tools"
 weight: 20
@@ -13,7 +13,7 @@ pillar: ["build", "teach"]
 
 Casebook Builder is the Project's tool for turning a faculty member's case list into a custom course casebook. Give it the cases you want; it fetches the full opinions, edits them down to casebook form — main cases, squibs, contrast cases, comprehension and discussion questions, and explanatory notes — and assembles them into units and a finished book ready for student distribution. It came out of a faculty conversation about the $300–500 commercial casebook problem: AI plus the right tooling should let faculty assemble exactly the casebook their course needs at a fraction of the cost.
 
-Three faculty pilots are lined up: Torts (Fall 2026), Patents (Fall 2026), and Legislation (Spring 2027).
+Tom Baker's Torts casebook, built with the tool, shipped in August 2026 and is live with students this fall — the Project's first complete casebook. Two more pilots follow in Spring 2027: Polk Wagner building Patent Law, and Ted Ruger building Legislation.
 
 ## What we're doing
 
@@ -29,4 +29,4 @@ Commercial casebooks are expensive, slow to update, and rarely a perfect fit for
 
 ## Status
 
-Active. Initialized June 2026 — spec and project scaffold in place, with the MVP build targeted for summer 2026. Faculty pilots in Torts (Fall 2026), Patents (Fall 2026), and Legislation (Spring 2027).
+Active. Torts (Tom Baker) shipped August 2026 and is live with students this fall — the tool's first complete casebook. Patent Law (Polk Wagner) and Legislation (Ted Ruger) pilots are next, both targeting Spring 2027.
