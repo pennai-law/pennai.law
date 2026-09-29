@@ -54,4 +54,4 @@ The code is open source and built to be forked: **[github.com/pennai-law/heron](
 
 ## Status
 
-Active. Deployed in a Spring 2026 Intellectual Property course and written up as an early draft paper. The implementation is one example, built one way; a lab-owned, course-general v2 — generalizing the architecture across courses — is the next major build.
+Active. Deployed in a Spring 2026 Intellectual Property course and written up as an early draft paper. The implementation is one example, built one way; a Project-owned, course-general v2 — generalizing the architecture across courses — is the next major build.
