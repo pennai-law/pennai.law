@@ -22,7 +22,7 @@ We organize around three pillars: **Research**, **Build**, and **Teach**. Resear
 
 ## Where we sit
 
-The AI Project is the **build/apply arm** of the broader Penn Carey Law AI Initiative. The Initiative is the strategy/curriculum/credentialing umbrella; we are where tools, code, training systems, and applied research get made.
+The AI Project is part of **TRAIL** (Technology, Regulation, AI, and the Law), Penn Carey Law's initiative bringing together its curriculum, experiential learning, and faculty research in AI, emerging technology, and law. Within TRAIL, we are where tools, code, training systems, and applied research get made.
 
 ## How we work
 
